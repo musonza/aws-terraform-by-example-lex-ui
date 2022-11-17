@@ -1,5 +1,7 @@
 # Lex UI demo
 
+For use with https://aws-terraform-by-example.com/ exercises 
+
 ## Setup
 
 ### S3 site deploy
