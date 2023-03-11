@@ -1,6 +1,8 @@
 # Lex UI demo
 
-For use with https://aws-terraform-by-example.com/ exercises 
+For use with https://aws-terraform-by-example.com/ exercises
+
+![Screenshot](static/screenshot.png)
 
 ## Setup
 
