@@ -4,7 +4,7 @@ For use with https://aws-terraform-by-example.com/ exercises
 
 ## Setup
 
-### S3 site deploy
+### S3 site deploy (optional)
 
 - Update the `bucket_name` in the `Makefile` with your bucket name
 
