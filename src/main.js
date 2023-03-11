@@ -18,8 +18,8 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store(LexWebUiStore)
 
-const poolId = 'us-east-1:ab485626-1769-49d8-8b26-3da678794541'
-const region = 'us-east-1'
+const poolId = process.env.POOLID
+const region = process.env.AWS_REGION
 const credentials = new CognitoIdentityCredentials(
   { IdentityPoolId: poolId },
   { region }
@@ -28,15 +28,13 @@ const awsConfig = new AWSConfig({ region, credentials })
 const lexRuntimeClient = new LexRuntime(awsConfig)
 const pollyClient = new Polly(awsConfig)
 
-console.log(process.env)
-
 // see the configuration section for details about the config fields
 const config = {
   cognito: {
     poolId
   },
   lex: {
-    botName: 'Classifieds',
+    botName: process.env.BOT_NAME,
     initialText: 'You can ask me for help adding posts. Just type "create post", "delete", "update", etc'
   },
   ui: {

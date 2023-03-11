@@ -5,16 +5,25 @@ For use with https://aws-terraform-by-example.com/ exercises
 ## Setup
 
 ### S3 site deploy
+
 - Update the `bucket_name` in the `Makefile` with your bucket name
 
-### Amazon Cognito
+### Environment variables
 
-_src/main.js_
+copy the example env file by running the following command in the root directory
 
+`cp config/example.env.js config/env.js`
+
+Add your env variables
+
+_config/env.js_
+
+Example
 ```js
 // ...
-const poolId = '<YOUR_POOL_ID_HERE>' // example: 'us-east-1:746dx87b-0fac-4560-bba5-47c2a3467ff6'
-const region = '<REGION>' // example: us-east-1
+  AWS_REGION: '"us-east-1"',
+  POOLID: '"us-east-1:746dx87b-0fac-4560-bba5-47c2a3467ff6"',
+  BOT_NAME: '"Classifieds"',
 // ...
 ```
 
